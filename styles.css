@@ -1,0 +1,225 @@
+/* ===========================
+   YES Connected Brand Styles
+   =========================== */
+
+:root {
+  --navy: #1C2431;
+  --aqua: #00A8E8;
+  --lime: #C6D136;
+  --light-gray: #F4F5F7;
+  --purple: #6E5BAA;
+  --white: #FFFFFF;
+  --text-dark: #1C2431;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, sans-serif;
+  background: var(--light-gray);
+  color: var(--text-dark);
+}
+
+
+/* ===========================
+   HEADER
+   =========================== */
+
+.app-header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.school-logo {
+  height: 55px;
+}
+
+.brand-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+
+/* ===========================
+   BUTTONS
+   =========================== */
+
+.btn {
+  background: var(--aqua);
+  border: none;
+  padding: 10px 15px;
+  color: var(--white);
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #008cc0;
+}
+
+.btn.small {
+  padding: 5px 10px;
+}
+
+.btn.full {
+  width: 100%;
+  padding: 12px;
+}
+
+
+/* ===========================
+   LOGIN VIEW
+   =========================== */
+
+.login-screen {
+  display: flex;
+  justify-content: center;
+  padding: 50px 10px;
+}
+
+.login-box {
+  background: var(--white);
+  padding: 25px;
+  max-width: 350px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0px 3px 8px rgba(0,0,0,0.1);
+}
+
+.login-box input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.forgot {
+  color: var(--aqua);
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+
+/* ===========================
+   DASHBOARD + THEMES GRID
+   =========================== */
+
+.banner {
+  text-align: center;
+  padding: 20px;
+  background: var(--navy);
+  color: var(--white);
+}
+
+.themes-grid {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.theme-card {
+  background: var(--white);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 3px 8px rgba(0,0,0,0.1);
+}
+
+.theme-card h3 {
+  margin-top: 0;
+  color: var(--navy);
+}
+
+.theme-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.theme-card li {
+  padding: 6px;
+  background: var(--light-gray);
+  cursor: pointer;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.theme-card li:hover {
+  background: var(--aqua);
+  color: var(--white);
+}
+
+
+/* ===========================
+   LESSON PLAYER
+   =========================== */
+
+.lesson-screen {
+  padding: 20px;
+}
+
+.lesson-screen textarea {
+  width: 100%;
+  height: 120px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+}
+
+
+/* ===========================
+   TEACHER DASHBOARD
+   =========================== */
+
+.teacher-screen {
+  padding: 20px;
+}
+
+.results-section {
+  margin-bottom: 30px;
+  background: var(--white);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 3px 8px rgba(0,0,0,0.1);
+}
+
+#editorSection {
+  background: var(--white);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 3px 8px rgba(0,0,0,0.1);
+}
+
+#editorSection input,
+#editorSection textarea,
+#editorSection select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+
+/* ===========================
+   FOOTER
+   =========================== */
+
+.footer {
+  text-align: center;
+  padding: 15px;
+  background: var(--navy);
+  color: var(--white);
+  margin-top: 40px;
+}
