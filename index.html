@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YES Connected PSHE Portal</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- ======================= HEADER ======================= -->
+  <header class="app-header">
+    <div class="logo-area">
+      <img src="assets/logo.png" alt="YES Connected Logo" class="school-logo" />
+      <h1 class="brand-title">YES Connected PSHE Portal</h1>
+    </div>
+    <div class="user-bar" id="userBar" style="display:none;">
+      <span id="welcomeName"></span>
+      <button class="btn small logout" onclick="logout()">Logout</button>
+    </div>
+  </header>
+
+
+
+  <!-- ======================= LOGIN VIEW ======================= -->
+  <main id="loginView" class="login-screen">
+    <div class="login-box">
+      <h2>Sign In</h2>
+
+      <input type="email" id="email" placeholder="Email" />
+      <input type="password" id="password" placeholder="Password" />
+
+      <p class="forgot" onclick="resetPassword()">Forgot your password?</p>
+
+      <input type="text" id="teacherCode" placeholder="Teacher Code (only for staff)" />
+
+      <button class="btn full" onclick="login()">Login</button>
+      <p class="note">Students: use your school email & password.<br>
+         Teachers: enter your teacher code for access.</p>
+    </div>
+  </main>
+
+
+
+  <!-- ======================= STUDENT DASHBOARD ======================= -->
+  <main id="dashboardView" class="dashboard" style="display:none;">
+    <section class="banner">
+      <h2>Welcome to PSHE Learning</h2>
+      <p>Select a theme to begin</p>
+    </section>
+
+    <section id="themesGrid" class="themes-grid">
+      <!-- Filled dynamically from lessons.json -->
+    </section>
+  </main>
+
+
+
+  <!-- ======================= LESSON PLAYER ======================= -->
+  <main id="lessonView" class="lesson-screen" style="display:none;">
+    <button class="btn small" onclick="returnToDashboard()">← Back</button>
+
+    <h2 id="lessonTitle"></h2>
+
+    <h3>Learning Objectives</h3>
+    <ul id="lessonObjectives"></ul>
+
+    <h3>Video</h3>
+    <iframe
+      id="lessonVideo"
+      width="560"
+      height="315"
+      frameborder="0"
+      allowfullscreen
+    ></iframe>
+
+    <h3>Activity</h3>
+    <p id="lessonActivityPrompt"></p>
+    <textarea id="activityInput" placeholder="Type your response here..."></textarea>
+
+    <h3>Knowledge Check</h3>
+    <p id="quizQuestion"></p>
+    <div id="quizOptions"></div>
+
+    <button class="btn full" onclick="submitQuiz()">Submit</button>
+    <p id="quizResult"></p>
+  </main>
+
+
+
+  <!-- ======================= TEACHER DASHBOARD ======================= -->
+  <main id="teacherView" class="teacher-screen" style="display:none;">
+    <button class="btn small" onclick="returnToDashboard()">← Back</button>
+
+    <h2>Teacher Dashboard</h2>
+    <p>View student scores and edit lesson content.</p>
+
+    <section id="studentResults" class="results-section">
+      <!-- Filled by JS -->
+    </section>
+
+    <h2>Edit Lesson Content</h2>
+    <section id="editorSection">
+      <select id="editorLessonSelect"></select>
+
+      <label>Title:</label>
+      <input type="text" id="editTitle" />
+
+      <label>Objectives (one per line):</label>
+      <textarea id="editObjectives"></textarea>
+
+      <label>Video URL (YouTube embed links):</label>
+      <input type="text" id="editVideo" />
+
+      <label>Activity Prompt:</label>
+      <textarea id="editActivity"></textarea>
+
+      <label>Quiz Question:</label>
+      <input type="text" id="editQuizQ" />
+
+      <label>Quiz Options (one per line):</label>
+      <textarea id="editQuizOptions"></textarea>
+
+      <label>Correct Option Index (0-3):</label>
+      <input type="number" id="editQuizAnswer" min="0" max="3" />
+
+      <button class="btn full" onclick="saveLessonEdits()">Save Changes</button>
+      <p id="editorStatus"></p>
+    </section>
+  </main>
+
+
+
+  <!-- ======================= FOOTER ======================= -->
+  <footer class="footer">
+    <p>© YES Connected – The YES Trust</p>
+  </footer>
+
+
+  <!-- ======================= SCRIPTS ======================= -->
+  <script type="module" src="firebase-config.js"></script>
+  <script type="module" src="app.js"></script>
+
+</body>
+</html>
