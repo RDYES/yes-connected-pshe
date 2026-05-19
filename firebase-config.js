@@ -3,9 +3,10 @@
 // Modern Firebase v10+ (ES Modules)
 // ===============================
 
-import { initializeApp } from "[gstatic.com](https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js)";
-import { getAuth } from "[gstatic.com](https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js)";
-import { getFirestore } from "[gstatic.com](https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js)";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+import { getAuth } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js";
+
 
 // ===== Your Firebase Configuration =====
 const firebaseConfig = {
