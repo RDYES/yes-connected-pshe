@@ -10,7 +10,7 @@ import {
   sendPasswordResetEmail,
   signOut,
   onAuthStateChanged
-} from "[gstatic.com](https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js)";
+} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
 
 import {
   doc,
@@ -19,7 +19,7 @@ import {
   getDocs,
   updateDoc,
   collection
-} from "[gstatic.com](https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js)";
+} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js";
 
 /* ====================================
    DOM READY
